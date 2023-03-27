@@ -1,0 +1,4 @@
+Model\user.class
+controller\UserServlet.class
+Databaseconnection\DBConnection.class
+Service\userservice.class
