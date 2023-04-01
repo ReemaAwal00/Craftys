@@ -1,6 +1,4 @@
 Model\Product.class
 Model\user.class
-Service\Productservice.class
-controller\UserServlet.class
-Databaseconnection\DBConnection.class
 Service\userservice.class
+Databaseconnection\DBConnection.class
