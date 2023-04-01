@@ -271,29 +271,27 @@
 
                 z-index: 1;
             }
+            .textbox {
+                background-color: bisque;
+            }
 
+            .imgbox {
+                background-color: black;
+                height: 230px;
+            }
+
+            .box {
+                width: 270px;
+                margin: 10px 20px;
+            }
             .bigbox {
                 margin: 0px 110px;
                 background-color: red;
-
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                /* justify-content: center; */
-                /* align-items: center; */
-                /*border-radius: 36px;*/
-
-                /* padding-top: 10px; */
-            }
-            .imgbox{
-                background-color: black;
-                height: 230px;
-                width: 60%;
-            }
-            .textbox{
-                background-color: bisque;
-                height: 130px;
-                width: 60%;
+                justify-content: center;
+                margin-bottom: 20px;
             }
 
             .container3 {
@@ -572,7 +570,7 @@
 
             }
             .box{
-                width: 30%;
+                width: 21%;
 
             }
         </style>
@@ -647,7 +645,7 @@
             </div>
 
             <div class="container2">
-                <h2>FEATURED PRODUCTS</h2>
+                <h2>TODAY'S DEALS</h2>
 
                 <div class="bigbox">
                     <c:forEach items="${featuresProduct}" var="product">
@@ -664,7 +662,7 @@
                         </div>
                     </c:forEach>
 
-`
+                    `
 
                 </div>
                 <!-- <div class="bigbox">

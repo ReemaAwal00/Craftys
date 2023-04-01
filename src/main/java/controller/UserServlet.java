@@ -84,6 +84,26 @@ public class UserServlet extends HttpServlet {
             rd.forward(request, response);
 
         }
+            if (page.equalsIgnoreCase("addproduct")) {
+            String fullname = request.getParameter("fullname");
+            String address = request.getParameter("address");
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+
+            
+             
+            user customer = new user();
+            customer.setFullname(fullname);
+            customer.setaddress(address);
+            customer.setEmail(email);
+            customer.setPassword(password);
+
+            userservice service = new userservice();
+            service.insertUser(customer);
+            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+            rd.forward(request, response);
+
+        }
     }
 
     @Override
