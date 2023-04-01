@@ -6,7 +6,6 @@ package Service;
 
 import Databaseconnection.DBConnection;
 import Model.Product;
-import Model.user;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
