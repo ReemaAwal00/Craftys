@@ -19,7 +19,7 @@ import java.util.List;
 public class CartService {
 
     public void insertCart(int user_id, int product_id) {
-        String query = "insert into cart(product_id, user_id)  values(?,?);";
+        String query = "insert into cart(product_id, user_id) values(?,?);";
         PreparedStatement preparedStatement = new DBConnection().getStatement(query);
         try {
             preparedStatement.setInt(1, product_id);
@@ -30,6 +30,29 @@ public class CartService {
         }
     }
 
+    public List<Cart> getCartsByUserId(int user_id) {
+        Cart cart = null;
+        List<Cart> carts = new ArrayList<Cart>();
+        String query = "select * from cart where user_id = ?;";
+        PreparedStatement preparedStatement = new DBConnection().getStatement(query);
+        try {
+            preparedStatement.setInt(1, user_id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                cart = new Cart();
+                cart.setCart_id(resultSet.getInt("cart_id"));
+                cart.setProduct_id(resultSet.getInt("product_id"));
+                cart.setUser_id(resultSet.getInt("user_id"));
+                carts.add(cart);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            return carts;
+
+        }
+    }
+    
     public List<Cart> getCarts() {
         Cart cart = null;
         List<Cart> carts = new ArrayList<Cart>();
@@ -51,4 +74,5 @@ public class CartService {
 
         }
     }
+    
 }

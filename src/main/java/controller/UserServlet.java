@@ -133,7 +133,7 @@ public class UserServlet extends HttpServlet {
 
             List<Product> featuresProduct = new ProductService().getProductsByFeatures();
             List<Product> BestProduct = new ProductService().getProductsByBestSeller();
-            List<Cart> carts = new CartService().getCarts();
+            List<Cart> carts = new CartService().getCartsByUserId(user.getId());
 
 //            request.setAttribute("product", product);
             request.setAttribute("featuresProduct", featuresProduct);
@@ -142,7 +142,7 @@ public class UserServlet extends HttpServlet {
 
             System.out.println(featuresProduct.get(0).getProduct_Name());
 
-            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
             rd.forward(request, response);
         }
 

@@ -719,7 +719,7 @@
 
                             </div>
                             <button class="cart">
-                                <a href="index.html">Add to cart</a></button>
+                                <a href="UserServlet?page=addCart&product_id=${product.product_id}">Add to cart</a></button>
 
                         </div>
                     </c:forEach>
