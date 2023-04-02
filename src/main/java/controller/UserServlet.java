@@ -1,8 +1,10 @@
 package controller;
 
+import Model.Cart;
 import Model.Product;
 import Model.user;
-import Service.Productservice;
+import Service.CartService;
+import Service.ProductService;
 import Service.userservice;
 import java.io.IOException;
 import java.util.List;
@@ -37,6 +39,35 @@ public class UserServlet extends HttpServlet {
 
         String page = request.getParameter("page");
 
+        if (page.equalsIgnoreCase("index")) {
+
+            getIndexInfo(request, response);
+
+            RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
+            rd.forward(request, response);
+        }
+
+        if (page.equalsIgnoreCase("login")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
+            rd.forward(request, response);
+        }
+        if (page.equalsIgnoreCase("signup")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/signup.jsp");
+            rd.forward(request, response);
+        }
+        if (page.equalsIgnoreCase("profile")) {
+            HttpSession session = request.getSession(false);
+            String email = (String) session.getAttribute("email");
+            System.out.println(email);
+
+            user user = new userservice().getUserByEmail(email);
+
+            request.setAttribute("user", user);
+
+            RequestDispatcher rd = request.getRequestDispatcher("/profile.jsp");
+            rd.forward(request, response);
+        }
+
         if (page.equalsIgnoreCase("newuser")) {
             String fullname = request.getParameter("fullname");
             String address = request.getParameter("address");
@@ -66,32 +97,69 @@ public class UserServlet extends HttpServlet {
 
             //Validating the User in database
             if (!service.getUser(email, password)) {
-                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
                 rd.forward(request, response);
 
             }
             HttpSession session = request.getSession();     //Creating session
             session.setAttribute("email", email);
-            
-            Product product = new Product();
-            List<Product> featuresProduct = new Productservice().getProductsByFeatures();
 
-                        request.setAttribute("product", product);
+            getIndexInfo(request, response);
 
-            request.setAttribute("featuresProduct", featuresProduct);
-
-            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
             rd.forward(request, response);
 
         }
-            if (page.equalsIgnoreCase("addproduct")) {
+        if (page.equalsIgnoreCase("ProductInfo")) {
+            int product_id = Integer.parseInt(request.getParameter("product_id"));
+
+            Product product = new ProductService().getProductById(product_id);
+            
+            request.setAttribute("product", product);
+
+            RequestDispatcher rd = request.getRequestDispatcher("/product_detail.jsp");
+            rd.forward(request, response);
+        }
+
+        if (page.equalsIgnoreCase("addcart")) {
+            HttpSession session = request.getSession(true);
+            String email = (String) session.getAttribute("email");
+
+            int product_id = Integer.parseInt(request.getParameter("product_id"));
+
+            user user = new userservice().getUserByEmail(email);
+
+            new CartService().insertCart(user.getId(), product_id);
+
+            List<Product> featuresProduct = new ProductService().getProductsByFeatures();
+            List<Product> BestProduct = new ProductService().getProductsByBestSeller();
+            List<Cart> carts = new CartService().getCarts();
+
+//            request.setAttribute("product", product);
+            request.setAttribute("featuresProduct", featuresProduct);
+            request.setAttribute("BestProduct", BestProduct);
+            request.setAttribute("carts", carts);
+
+            System.out.println(featuresProduct.get(0).getProduct_Name());
+
+            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+            rd.forward(request, response);
+        }
+
+        if (page.equalsIgnoreCase("category")) {
+            List<Product> DesktopStationery = new ProductService().getProductsByDesktopStationery();
+            request.setAttribute("DesktopStationery", DesktopStationery);
+
+            RequestDispatcher rd = request.getRequestDispatcher("category.jsp");
+            rd.forward(request, response);
+        }
+
+        if (page.equalsIgnoreCase("addproduct")) {
             String fullname = request.getParameter("fullname");
             String address = request.getParameter("address");
             String email = request.getParameter("email");
             String password = request.getParameter("password");
 
-            
-             
             user customer = new user();
             customer.setFullname(fullname);
             customer.setaddress(address);
@@ -104,6 +172,21 @@ public class UserServlet extends HttpServlet {
             rd.forward(request, response);
 
         }
+    }
+
+    private static void getIndexInfo(HttpServletRequest request, HttpServletResponse response) {
+        Product product = new Product();
+        List<Product> featuresProduct = new ProductService().getProductsByFeatures();
+        List<Product> BestProduct = new ProductService().getProductsByBestSeller();
+        List<Cart> carts = new CartService().getCarts();
+
+//            request.setAttribute("product", product);
+        request.setAttribute("featuresProduct", featuresProduct);
+        request.setAttribute("BestProduct", BestProduct);
+        request.setAttribute("carts", carts);
+
+        System.out.println(featuresProduct.get(0).getProduct_Name());
+
     }
 
     @Override

@@ -94,7 +94,7 @@
         .list ul {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 36px;
 
             list-style: none;
         }
@@ -454,8 +454,7 @@
                 <div class="list">
                     <ul>
                         
-                        <input type="text" placeholder="search">
-                        <li> <a href="cart.jsp"> <i class='bx bx-search-alt-2 bx-sm'></i></a></li>
+                       
 
                         <li> <a href="cart.jsp"><i class='bx bx-cart bx-sm'></i></a></li>
 

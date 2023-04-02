@@ -12,10 +12,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Productservice {
-
-    public void addProduct(Product product) {
-        String query = "insert into product(product_id, product_Name, product_Price, product_Image, product_Category) values(?,?,?,?,?);";
+/**
+ *
+ * @author Dell
+ */
+public class ProductService {
+     public void addProduct(Product product) {
+        String query = "insert into product(product_id, product_Name, product_Price, product_Image, product_Category, product_Describe) values(?,?,?,?,?,?);";
 
         PreparedStatement preparedStatement = new DBConnection().getStatement(query);
         try {
@@ -24,6 +27,7 @@ public class Productservice {
             preparedStatement.setString(3, product.getProduct_Price());
             preparedStatement.setString(4, product.getProduct_Image());
             preparedStatement.setString(5, product.getProduct_category());
+            preparedStatement.setString(6, product.getProduct_Describe());
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -44,11 +48,81 @@ public class Productservice {
                 product.setProduct_Name(resultSet.getString("product_Name"));
                 product.setProduct_Price(resultSet.getString("product_Price"));
                 product.setProduct_category(resultSet.getString("product_Category"));
+                 product.setProduct_Describe(resultSet.getString("product_Describe"));
+                
                 products.add(product);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return products;
+    }
+    
+     public List<Product> getProductsByBestSeller() {
+        Product product = null;
+        List<Product> products = new ArrayList<Product>();
+        String query = "select * from product where product_Category='best seller';";
+        PreparedStatement preparedStatement = new DBConnection().getStatement(query);
+        try {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                product = new Product();
+                product.setProduct_id(resultSet.getInt("product_id"));
+                product.setProduct_Image(resultSet.getString("product_Image"));
+                product.setProduct_Name(resultSet.getString("product_Name"));
+                product.setProduct_Price(resultSet.getString("product_Price"));
+                product.setProduct_category(resultSet.getString("product_Category"));
+                product.setProduct_Describe(resultSet.getString("product_Describe"));
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+     
+     public List<Product> getProductsByDesktopStationery() {
+        Product product = null;
+        List<Product> products = new ArrayList<Product>();
+        String query = "select * from product where product_Category='Desktop Stationery';";
+        PreparedStatement preparedStatement = new DBConnection().getStatement(query);
+        try {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                product = new Product();
+                product.setProduct_id(resultSet.getInt("product_id"));
+                product.setProduct_Image(resultSet.getString("product_Image"));
+                product.setProduct_Name(resultSet.getString("product_Name"));
+                product.setProduct_Price(resultSet.getString("product_Price"));
+                product.setProduct_category(resultSet.getString("product_Category"));
+                product.setProduct_Describe(resultSet.getString("product_Describe"));
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+
+    public Product getProductById(int product_id) {
+        Product product = null;
+         String query = "select * from product where product_id=?;";
+        PreparedStatement preparedStatement = new DBConnection().getStatement(query);
+        try {
+            preparedStatement.setInt(1, product_id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                product = new Product();
+                product.setProduct_id(resultSet.getInt("product_id"));
+                product.setProduct_Image(resultSet.getString("product_Image"));
+                product.setProduct_Name(resultSet.getString("product_Name"));
+                product.setProduct_Price(resultSet.getString("product_Price"));
+                product.setProduct_category(resultSet.getString("product_Category"));
+                product.setProduct_Describe(resultSet.getString("product_Describe"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return product;
     }
 }

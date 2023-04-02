@@ -33,9 +33,8 @@ public class userservice {
     }
 
     public boolean getUser(String email, String password) {
-        user customer=null;
+        user customer = null;
         String query = "select * from user where email=? and password=? ;";
-
         PreparedStatement preparedStatement = new DBConnection().getStatement(query);
         try {
             preparedStatement.setString(1, email);
@@ -48,9 +47,9 @@ public class userservice {
                 customer.setId(resultSet.getInt("id"));
                 customer.setFullname(resultSet.getString("fullname"));
                 customer.setEmail(resultSet.getString("email"));
+                customer.setaddress(resultSet.getString("address"));
                 customer.setPassword(resultSet.getString("password"));
                 return true;
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -58,6 +57,27 @@ public class userservice {
 
         }
         return false;
+    }
+
+    public user getUserByEmail(String email) {
+        user customer = null;
+        String query = "select * from user where email=?;";
+        PreparedStatement preparedStatement = new DBConnection().getStatement(query);
+        try {
+            preparedStatement.setString(1, email);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                customer = new user();
+                customer.setId(resultSet.getInt("id"));
+                customer.setFullname(resultSet.getString("fullname"));
+                customer.setEmail(resultSet.getString("email"));
+                customer.setaddress(resultSet.getString("address"));
+                customer.setPassword(resultSet.getString("password"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return customer;
     }
 
 }

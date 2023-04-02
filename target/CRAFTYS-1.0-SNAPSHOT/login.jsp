@@ -94,7 +94,7 @@
         .list ul {
             display: flex;
             align-items: center;
-            /* gap: 16px; */
+             gap: 16px; 
 
             list-style: none;
         }
@@ -464,8 +464,7 @@
             <div class="icon-groups">
                 <div class="list">
                     <ul>
-                        <input type="text" placeholder="search">
-                        <li> <a href="cart.jsp"> <i class='bx bx-search-alt-2 bx-sm'></i></a></li>
+                        
 
                         <li> <a href="cart.jsp"><i class='bx bx-cart bx-sm'></i></a></li>
 
@@ -491,9 +490,9 @@
                     <a href="reset.html">Forget password?</a>
                 </div>
     
-                <button name="button" value="login"> SIGN IN</button>
+                <button name="button" type="submit"> SIGN IN</button>
                 
-                    <a href="signup.html">Create an account?</a>
+                    <a href="UserServlet?page=signup">Create an account?</a>
                
             </form>
             

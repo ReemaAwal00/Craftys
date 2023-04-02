@@ -14,7 +14,16 @@ public class Product {
     private String product_Price;
     private String product_Image;
     private String product_category;
+    private String product_Describe;
 
+    public String getProduct_Describe() {
+        return product_Describe;
+    }
+
+    public void setProduct_Describe(String product_Describe) {
+        this.product_Describe = product_Describe;
+    }
+    
     public int getProduct_id() {
         return product_id;
     }
