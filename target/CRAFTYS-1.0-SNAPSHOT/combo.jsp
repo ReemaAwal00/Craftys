@@ -584,7 +584,8 @@
             .cart a {
                 text-decoration: none;
                 color: white;
-                font-size: 16px;
+                font-size: 20px;
+                font-family: lora;
 
             }
 

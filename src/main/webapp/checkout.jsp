@@ -615,9 +615,9 @@
                         <select name="payment" id="inputStatus" class="form-control custom-select" >
                             <option selected disabled>Choose payment</option>
                             <option value="COD">Cash on Delivery</option>
-                            <option value="E-sewa">E-sewa</option>
+<!--                            <option value="E-sewa">E-sewa</option>-->
                         </select>
-                        <a href="profile.html">
+                        <a href="UserServlet?page=index">
                             <button name="button" value="submit"> Done</button></a>
 
                     </form>

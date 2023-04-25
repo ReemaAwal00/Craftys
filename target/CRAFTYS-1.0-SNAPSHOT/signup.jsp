@@ -474,7 +474,7 @@
                 <input type="text" name="fullname" id="name" placeholder="Fullname">
                 <input type="text" name="address" id="address" placeholder="Current Address">
                 <input type="text" name="email" id="username" placeholder="Email">
-                <input type="password" name="password" id="password" placeholder="Password" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
+                <input type="password" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
     
                 

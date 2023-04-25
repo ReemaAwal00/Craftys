@@ -532,20 +532,22 @@
 
             </div> <!--header ens-->
 
-            <!-- Cart Container Start -->
+          <!-- Cart Container Start -->
             <div class="cart-container" id="cart-container">
                 <h3>Your cart</h3>
                 <div class="cart-container-body">
-                    <div class="cart-container-body-content">
-                        <div class="cart-container-body-content-img">
-                            <img src="desk.jpg" alt="">
+                    <c:forEach items="${cartProducts}" var="product">
+                        <div class="cart-container-body-content">
+                            <div class="cart-container-body-content-img">
+                                <img src="${pageContext.request.contextPath}/img/${product.product_Image}" alt="">
+                            </div>
+                            <div class="cart-container-body-content-right">
+                                <p>${product.product_Name}</p>
+                                <p>Rs ${product.product_Price}</p>
+                                <a href="UserServlet?page=remove&cart_id=${cart.cart_id}">Remove</a>
+                            </div>
                         </div>
-                        <div class="cart-container-body-content-right">
-                            <p>Name ukhjh</p>
-                            <p>Rs 300</p>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
+                    </c:forEach>
 
 
                 </div>
@@ -555,6 +557,7 @@
                 </div>
             </div>
             <!-- Cart container End -->
+            
             <form action="UserServlet?page=checkout&product_id=${product.product_id}" method="post">
                 <div class="loginbox">
                     <div class="box1">

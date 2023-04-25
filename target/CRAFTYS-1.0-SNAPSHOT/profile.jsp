@@ -371,7 +371,7 @@
             background-color: aliceblue;
             width: 87%;
             margin: 0 96px;
-            margin-bottom: 40px;
+            margin-bottom: 80px;
 
         }
 
@@ -578,11 +578,11 @@
             <!-- <h2>Account Information</h2> -->
             <h3>My profile</h3>
             <div class="detailbox">
-                <div class="edit"><a href="#">
+<!--                <div class="edit"><a href="#">
 
                         <button class="submit">Update</button>
                     </a>
-                </div>
+                </div>-->
 
                 <div class="update">
                     <ul>
@@ -607,7 +607,7 @@
 
                     </ul>
                     <div class="change">
-                        <li><a href="UserServlet?page=changepassword">Change password</a></li>
+<!--                        <li><a href="UserServlet?page=changepassword">Change password</a></li>-->
                         <br>
                         <li><a href="UserServlet?page=logout">Logout</a></li>
                     </div>
@@ -615,7 +615,7 @@
 
             </div>
 
-            <h2>My orders</h2>
+<!--            <h2>My orders</h2>
             <div class="container">
                 <table class="table-datatable">
                     <thead>
@@ -623,7 +623,7 @@
                             <th scope="col">Product_ID</th>
                             <th scope="col">Product_Name</th>
                             <th scope="col">Product_Image</th>
-                            <!-- <th scope="col">Price</th> -->
+                             <th scope="col">Price</th> 
                             <th scope="col">Status</th>
                         </tr>
                     </thead>
@@ -632,7 +632,7 @@
                             <th scope="row">#2457</th>
                             <td>Brandon Jacob</td>
                             <td><img src="desk.jpg" alt="sd" style="width: 150px; height: 100px;"></td>
-                            <!-- <td>$64</td> -->
+                             <td>$64</td> 
                             <td><a href="#"><span class="badge bg-danger"><i class="bi bi-exclamation-octagon me-1"></i>
                                         Remove</span></a></td>
                         </tr>
@@ -640,7 +640,7 @@
                             <th scope="row">#2147</th>
                             <td>Bridie Kessler</td>
                             <td>Blanditiis dolor omnis similique</td>
-                            <!-- <td>$47</td> -->
+                             <td>$47</td> 
                             <td><a href="#"><span class="badge bg-danger"><i class="bi bi-exclamation-octagon me-1"></i>
                                         Remove</span></a></td>
                         </tr>
@@ -648,7 +648,7 @@
                 </table>
             </div>
 
-        </div>
+        </div>-->
         <div class="footer">
             <div class="footerbox">
                 <div class="title">
