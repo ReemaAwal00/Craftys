@@ -10,7 +10,7 @@
     <title>About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cart.css">
     <style>
         * {
             margin: 0;
@@ -21,7 +21,7 @@
 
         body {
             min-height: 100vh;
-            font-family: 'poppins', sans-serif;
+           
         }
 
         .mainbody {
@@ -81,8 +81,8 @@
 
         .reema ul li {
             list-style: none;
-            font-size: 20px;
-            font-family: Century Schoolbook;
+            font-size: 19px;
+            font-family: lora;
             justify-content: center;
         }
 
@@ -122,9 +122,9 @@
         .dropdown a {
             text-decoration: none;
             color: black;
-            font-family: century schoolbook;
+            font-family: lora;
 
-            font-size: 20px;
+            font-size: 19px;
 
         }
 
@@ -196,9 +196,9 @@
         }
 
         .title1 p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
-            font-size: 18px;
+            font-size: 17px;
             /* padding: 50px; */
             /* margin-top: 60px; */
             text-align: justify;
@@ -208,9 +208,9 @@
         }
 
         .title2 p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
-            font-size: 18px;
+            font-size: 17px;
             /* padding: 50px; */
             /* margin-top: 60px; */
             text-align: justify;
@@ -220,9 +220,9 @@
         }
 
         .title3 p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
-            font-size: 18px;
+            font-size: 17px;
             /* padding: 50px; */
             /* margin-top: 60px; */
             text-align: justify;
@@ -232,9 +232,9 @@
         }
 
         .title4 p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
-            font-size: 18px;
+            font-size: 17px;
             /* padding: 50px; */
             /* margin-top: 60px; */
             text-align: justify;
@@ -255,7 +255,7 @@
         .footerbox1 h2 {
             color: black;
             font-size: 27px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             padding: 12px;
             text-align: center;
             margin-top: 20px;
@@ -268,8 +268,8 @@
 
         .footerbox1 ul li {
             text-decoration: none;
-            font-size: 18px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            font-family: lora;
             padding: 10px;
             text-align: center;
         }
@@ -292,7 +292,7 @@
         .footerbox2 h2 {
             color: black;
             font-size: 27px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family:lora;
             padding: 12px;
             text-align: center;
         }
@@ -304,8 +304,8 @@
 
         .footerbox2 ul li {
             text-decoration: none;
-            font-size: 18px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            font-family: lora;
             padding: 10px;
             text-align: center;
         }
@@ -327,7 +327,7 @@
 
         .last p {
             font-size: 15px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
             text-align: center;
             padding: 20px;
@@ -376,8 +376,8 @@
 
 
         .box2 p {
-            font-size: 18px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            font-family: lora;
             text-align: justify;
             margin-top: 5px;
             margin-left: 35px;
@@ -387,8 +387,8 @@
         }
 
         .box2 li {
-            font-size: 18px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            font-family: lora;
             text-align: justify;
             margin-top: 5px;
             margin-left: 50px
@@ -397,7 +397,7 @@
         .head {
             margin-top: 55px;
             padding: 30px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
         }
 
         .head h1 {
@@ -427,11 +427,11 @@
                     <li> <a href="index.html">Home</a></li>
 
                     <div class="dropdown">
-                        <a href="product.jsp">Products</a>
+                        <a href="UserServlet?page=category">Products</a>
                         <div class="dropdown-content">
 
-                            <a href="#">Desktop Stationery</a>
-                            <a href="#">Arts supplies</a>
+                            <a href="UserServlet?page=category">Desktop Stationery</a>
+                            <a href="UserServlet?page=art_category">Arts supplies</a>
                             <a href="#">Paper products</a>
                             <a href="#">Calculators</a>
                             <a href="#">Student supplies</a>
@@ -439,8 +439,8 @@
                              <a href="#">Notebooks</a>
                         </div>
                     </div>
-                    <li> <a href="about.jsp">Combo Offers</a></li>
-                    <li> <a href="contact.jsp" id="active">About Us</a></li>
+                    <li> <a href="UserServlet?page=combo">Combo Offers</a></li>
+                    <li> <a href="UserServlet?page=about" id="active">About Us</a></li>
 
                 </ul>
 
@@ -469,7 +469,7 @@
             <div class="cart-container-body">
                 <div class="cart-container-body-content">
                     <div class="cart-container-body-content-img">
-                        <img src="desk.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/img/desk.jpg" alt="">
                     </div>
                     <div class="cart-container-body-content-right">
                         <p>Name ukhjh</p>
@@ -493,7 +493,7 @@
         <div class="aboutus">
 
             <div class="box1">
-                <img src="store1.jpg" style=" height: 500px; width:100%">
+                <img src="${pageContext.request.contextPath}/img/store1.jpg" style=" height: 500px; width:100%">
             </div>
             <div class="box2">
 
@@ -529,8 +529,7 @@
                     magna aliqua.
                 </p>
                 <div class="box2-img">
-                    <iframe width="100%" height="220px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                    </iframe>
+                    <iframe width="100%" height="220px" src="https://www.youtube.com/embed/7eHVLI126mw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <!-- <img src="coverpage.jpg" style=" height: 220px; width:100%"> -->
                 </div>
             </div>

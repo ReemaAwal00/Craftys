@@ -11,7 +11,7 @@
         <title>Products</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/font-awesome.min.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="cart.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cart.css">
         <style>
             * {
                 margin: 0;
@@ -22,7 +22,7 @@
 
             body {
                 min-height: 100vh;
-                font-family: 'poppins', sans-serif;
+/*                font-family: 'poppins', sans-serif;*/
             }
 
             .mainbody {
@@ -50,7 +50,7 @@
                 position: fixed;
                 padding: 12px 96px;
                 /* margin-left: 100px; */
-                font-family: Century SchoolBook;
+/*                font-family: Century SchoolBook;*/
                 display: flex;
                 box-shadow: 0px 6px rgb(167, 72, 85);
                 align-items: center;
@@ -84,8 +84,8 @@
 
             .reema ul li {
                 list-style: none;
-                font-size: 20px;
-                font-family: Century Schoolbook;
+                font-size: 19px;
+                font-family: lora;
                 justify-content: center;
             }
 
@@ -129,9 +129,9 @@
             .dropdown a {
                 text-decoration: none;
                 color: black;
-                font-family: century schoolbook;
+                font-family: lora;
 
-                font-size: 20px;
+                font-size: 19px;
 
             }
 
@@ -199,9 +199,9 @@
             }
 
             .title1 p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 color: black;
-                font-size: 18px;
+                font-size: 17px;
                 /* padding: 50px; */
                 /* margin-top: 60px; */
                 text-align: justify;
@@ -211,11 +211,9 @@
             }
 
             .title2 p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family:lora;
                 color: black;
-                font-size: 18px;
-                /* padding: 50px; */
-                /* margin-top: 60px; */
+                font-size: 17px;
                 text-align: justify;
                 /* font-weight: 300; */
                 margin-left: 19px;
@@ -223,9 +221,9 @@
             }
 
             .title3 p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family:lora;
                 color: black;
-                font-size: 18px;
+                font-size: 17px;
                 /* padding: 50px; */
                 /* margin-top: 60px; */
                 text-align: justify;
@@ -235,9 +233,9 @@
             }
 
             .title4 p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 color: black;
-                font-size: 18px;
+                font-size: 17px;
                 /* padding: 50px; */
                 /* margin-top: 60px; */
                 text-align: justify;
@@ -258,7 +256,7 @@
             .footerbox1 h2 {
                 color: black;
                 font-size: 27px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 padding: 12px;
                 text-align: center;
                 margin-top: 20px;
@@ -271,8 +269,8 @@
 
             .footerbox1 ul li {
                 text-decoration: none;
-                font-size: 18px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 17px;
+                font-family: lora;
                 padding: 10px;
                 text-align: center;
             }
@@ -295,7 +293,7 @@
             .footerbox2 h2 {
                 color: black;
                 font-size: 27px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 padding: 12px;
                 text-align: center;
             }
@@ -307,8 +305,8 @@
 
             .footerbox2 ul li {
                 text-decoration: none;
-                font-size: 18px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 20px;
+                font-family:lora;
                 padding: 10px;
                 text-align: center;
             }
@@ -330,7 +328,7 @@
 
             .last p {
                 font-size: 15px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family:lora;
                 color: black;
                 text-align: center;
                 padding: 20px;
@@ -352,7 +350,7 @@
             }
 
             .detailbox {
-                height: 1000px;
+                    height: 1214px;
                 background-color: aliceblue;
 
 
@@ -368,7 +366,9 @@
                 background-color: aliceblue;
                 margin-top: 55px;
                 gap: 63px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
+                font-size: 15px;
+                
             }
 
             .container {
@@ -428,7 +428,7 @@
                 width: 87%;
                 display: flex;
                 gap: 20px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
             }
 
             .category-list {
@@ -496,22 +496,24 @@
             }
 
             .textbox {
-                background-color: bisque;
+                /*background-color: bisque;*/
+               
                 height: 80px;
 
             }
 
             .textbox h3 {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: 20px;
+                font-family: lora;
+                font-size: 18px;
                 margin-bottom: 10px;
+                margin-top: 20px;
 
                 /* padding: 10px;
                 text-align: center; */
             }
 
             .textbox p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 font-size: 20px;
                 /* margin-left: 55px; */
 
@@ -521,7 +523,7 @@
                 margin-right: 7px;
                 width: 30%;
                 padding-top: 18px;
-                margin-left: 14px;
+               margin-left: 21px;                
 
             }
 
@@ -537,6 +539,7 @@
                 border-radius: 10px;
                 color: white;
                 font-size: 20px;
+                font-family: lora;
                 border-color: rgb(187, 91, 94);
             }
 
@@ -545,14 +548,18 @@
                 height: 40px;
                 background-color: rgb(167, 72, 85);
                 border-color: rgb(167, 72, 85);
-
+                font-family: lora;
             }
 
             .cart a {
                 text-decoration: none;
                 color: white;
-                font-size: 16px;
+                font-size: 18px;
 
+            }
+            .box:hover{
+                transition: 0.5s all ease;
+                transform: scale(1.1);
             }
         </style>
     </head>
@@ -572,7 +579,7 @@
                     <li> <a href="index.html">Home</a></li>
 
                     <div class="dropdown">
-                        <a href="catalog.jsp" id="active">Products</a>
+                        <a href="UserServlet?page=category" id="active">Products</a>
                         <div class="dropdown-content">
 
                             <a href="#">Desktop Stationery</a>
@@ -584,8 +591,8 @@
                             <a href="#">Notebooks</a>
                         </div>
                     </div>
-                    <li> <a href="about.jsp">Combo Offers</a></li>
-                    <li> <a href="about.html">About Us</a></li>
+                    <li> <a href="UserServlet?page=combo">Combo Offers</a></li>
+                    <li> <a href="UserServlet?page=about">About Us</a></li>
 
                 </ul>
 
@@ -608,20 +615,25 @@
             </div> <!--icons ends-->
 
         </div> <!--header ens-->
+        
         <!-- Cart Container Start -->
-        <div class="cart-container" id="cart-container">
-            <h3>Your cart</h3>
-            <div class="cart-container-body">
-                <div class="cart-container-body-content">
-                    <div class="cart-container-body-content-img">
-                        <img src="desk.jpg" alt="">
-                    </div>
-                    <div class="cart-container-body-content-right">
-                        <p>Name ukhjh</p>
-                        <p>Rs 300</p>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
+            <div class="cart-container" id="cart-container">
+                <h3>Your cart</h3>
+                <div class="cart-container-body">
+                    <c:forEach items="${cartProducts}" var="product">
+                        <div class="cart-container-body-content">
+                            <div class="cart-container-body-content-img">
+                                <img src="${pageContext.request.contextPath}/img/${product.product_Image}" alt="">
+                            </div>
+                            <div class="cart-container-body-content-right">
+                                <p>${product.product_Name}</p>
+                                <p>Rs ${product.product_Price}</p>
+                                <a href="UserServlet?page=remove&cart_id=${cart.cart_id}">Remove</a>
+                            </div>
+                        </div>
+                    </c:forEach>
+
+
 
 
             </div>
@@ -640,10 +652,10 @@
                         </h2>
                         <div class="container-down" style="display: flex;">
                             <div class="container-down-detail">
-                                <span>Code:45rgf</span>
+                                <span>Code:45YTA</span>
                                 <button type="submit">Shop Now</button>
                             </div>
-                            <img src="pngwing.com.png" height="150px" width="100%">
+                            <img src="${pageContext.request.contextPath}/img/pngwing.com.png" height="150px" width="100%">
                         </div>
 
                     </div>
@@ -652,10 +664,10 @@
                         </h2>
                         <div class="container-down" style="display: flex;">
                             <div class="container-down-detail">
-                                <span>Code: 5TDS</span>
+                                <span>Desk Accessories</span>
                                 <button type="submit">Shop Now</button>
                             </div>
-                            <img src="close-up-view-back-school-concept.jpg" height="150px" width="100%">
+                            <img src="${pageContext.request.contextPath}/img/close-up-view-back-school-concept.jpg" height="150px" width="100%">
                         </div>
                     </div>
                     <div class="container2">
@@ -663,10 +675,10 @@
                         </h2>
                         <div class="container-down" style="display: flex;">
                             <div class="container-down-detail">
-                                <span>Code:AT45</span>
+                                <span>School supplies</span>
                                 <button type="submit">Shop Now</button>
                             </div>
-                            <img src="pens1.png" height="150px" width="100%">
+                            <img src="${pageContext.request.contextPath}/img/pens1.png" height="150px" width="100%">
                         </div>
                     </div>
                 </div>
@@ -676,8 +688,8 @@
 
                         <div class="list" style="font-size: 17px;">
                             <ul>
-                                <li> <a href="catalog.jsp" class="active"> Desktop Stationery</a></li>
-                                <li> <a href="catalog.jsp">Art and Crafts Supplies</a></li>
+                                <li> <a href="UserServlet?page=category" class="active"> Desktop Stationery</a></li>
+                                <li> <a href="UserServlet?page=art_category">Art Supplies</a></li>
                                 <li> <a href="catalog.jsp">Paper products</a></li>
                                 <li> <a href="catalog.jsp">Student supplies</a></li>
                                 <li> <a href="catalog.jsp">Writing Instruments</a></li>
@@ -694,8 +706,8 @@
                             <c:forEach items="${DesktopStationery}" var="product">
                                 <div class="box">
                                     <div class="imgbox">
-                                        <a href="item1.html">
-                                            <img src="${product.product_Image}" height="230px" width="100%"></a>
+                                        <a href="UserServlet?page=productInfo&product_id=${product.product_id}">
+                                            <img src="${pageContext.request.contextPath}/img/${product.product_Image}" height="230px" width="100%"></a>
                                     </div>
                                     <div class="textbox">
                                         <h3>${product.product_Name}</h3>

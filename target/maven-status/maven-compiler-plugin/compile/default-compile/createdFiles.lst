@@ -3,7 +3,6 @@ Model\Product.class
 Model\user.class
 Service\CartService.class
 Service\userservice.class
-Programs\Redirector.class
 controller\UserServlet.class
 Databaseconnection\DBConnection.class
 Service\ProductService.class

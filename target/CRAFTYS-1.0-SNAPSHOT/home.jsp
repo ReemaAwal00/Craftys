@@ -27,7 +27,7 @@
 
             body {
                 min-height: 100vh;
-                font-family: 'poppins', sans-serif;
+/*                font-family: 'poppins', sans-serif;*/
             }
 
             .mainbody {
@@ -55,7 +55,7 @@
                 position: fixed;
                 padding: 12px 96px;
                 /* margin-left: 100px; */
-                font-family: Century SchoolBook;
+               
                 display: flex;
                 box-shadow: 0px 6px rgb(167, 72, 85);
                 align-items: center;
@@ -91,8 +91,8 @@
 
             .reema ul li {
                 list-style: none;
-                font-size: 20px;
-                font-family: Century Schoolbook;
+                font-size: 19px;
+                font-family: lora;
                 justify-content: center;
             }
 
@@ -137,9 +137,9 @@
             .dropdown a {
                 text-decoration: none;
                 color: black;
-                font-family: century schoolbook;
+                font-family: lora;
 
-                font-size: 20px;
+                font-size: 19px;
 
             }
 
@@ -195,11 +195,6 @@
                 color: white;
             }
 
-            .inner h1 {
-                font-size: 80px;
-                font-family: "century";
-                text-align: center;
-            }
 
             .archieve {
                 background-color: rgb(187, 91, 94);
@@ -211,22 +206,22 @@
                 text-align: center;
                 padding: 20px;
                 /* margin-top: 30px; */
-                font-size: 35px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 30px;
+                font-family: lora;
                 color: white;
             }
 
             .archieve p {
                 text-align: center;
                 /* padding: 5px; */
-                font-size: 25px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 24px;
+                font-family:lora;
                 color: white;
             }
 
             .archieve button {
                 height: 50px;
-                width: 100px;
+                width: 120px;
                 color: rgb(187, 91, 94);
                 background-color: white;
                 justify-content: center;
@@ -234,10 +229,10 @@
                 align-items: center;
                 border: none;
                 margin-left: 685px;
-                margin-top: 20px;
+                margin-top: 10px;
                 padding: 10px;
                 font-size: 18px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
 
                 /* display: inline-block; */
             }
@@ -254,15 +249,17 @@
                 background-color: aliceblue;
                 height: 550px;
                 width: 100%;
+               
 
             }
 
             .container2 h2 {
                 color: black;
                 text-align: center;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: 30px;
-                padding: 40px;
+                font-family: lora;
+                font-size: 28px;
+                padding: 50px;
+                padding-top: 80px;
             }
 
             .container2 h2::after {
@@ -288,19 +285,20 @@
             }
 
             .textbox {
-                background-color: bisque;
+                /*background-color: bisque;*/
                 height: 70px;
             }
 
             .textbox h3 {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: 20px;
+                font-family: lora;
+                font-size: 18px;
                 margin-bottom: 10px;
+                margin-top: 20px;
             }
 
             .textbox p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: 20px;
+                font-family:lora;
+                font-size: 18px;
             }
 
             .container3 {
@@ -309,6 +307,7 @@
                 width: 100%;
                 display: flex;
                 gap: 8px;
+               padding-top: 40px;
             }
 
             .box1 {
@@ -341,7 +340,7 @@
             .box2 h2 {
                 color: black;
                 font-size: 40px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family:lora;
                 text-align: center;
                 padding: 20px;
                 margin-top: 16px;
@@ -349,7 +348,7 @@
 
             .box2 p {
                 font-size: 24px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 text-align: center;
                 padding: 20px;
 
@@ -360,15 +359,16 @@
                 background-color: aliceblue;
                 height: 550px;
                 width: 100%;
-
+                padding-top: 40px;
             }
 
             .bestseller h2 {
                 color: black;
                 text-align: center;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 font-size: 30px;
                 padding: 40px;
+                
             }
 
 
@@ -437,9 +437,9 @@
             }
 
             .title1 p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 color: black;
-                font-size: 18px;
+                font-size:17px;
                 /* padding: 50px; */
                 /* margin-top: 60px; */
                 text-align: justify;
@@ -449,9 +449,9 @@
             }
 
             .title2 p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 color: black;
-                font-size: 18px;
+                font-size: 17px;
                 /* padding: 50px; */
                 /* margin-top: 60px; */
                 text-align: justify;
@@ -461,9 +461,9 @@
             }
 
             .title3 p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: lora;
                 color: black;
-                font-size: 18px;
+                font-size: 17px;
                 /* padding: 50px; */
                 /* margin-top: 60px; */
                 text-align: justify;
@@ -473,9 +473,9 @@
             }
 
             .title4 p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family:lora;
                 color: black;
-                font-size: 18px;
+                font-size: 17px;
                 /* padding: 50px; */
                 /* margin-top: 60px; */
                 text-align: justify;
@@ -495,8 +495,8 @@
 
             .footerbox1 h2 {
                 color: black;
-                font-size: 27px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 28px;
+                font-family: lora;
                 padding: 12px;
                 text-align: center;
                 margin-top: 20px;
@@ -509,8 +509,8 @@
 
             .footerbox1 ul li {
                 text-decoration: none;
-                font-size: 18px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 17px;
+                font-family: lora;
                 padding: 10px;
                 text-align: center;
             }
@@ -532,8 +532,8 @@
 
             .footerbox2 h2 {
                 color: black;
-                font-size: 27px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 28px;
+                font-family: lora;
                 padding: 12px;
                 text-align: center;
             }
@@ -545,8 +545,8 @@
 
             .footerbox2 ul li {
                 text-decoration: none;
-                font-size: 18px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 17px;
+                font-family:lora;
                 padding: 10px;
                 text-align: center;
             }
@@ -568,7 +568,7 @@
 
             .last p {
                 font-size: 15px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family:lora;
                 color: black;
                 text-align: center;
                 padding: 20px;
@@ -592,13 +592,14 @@
                 height: 40px;
                 background-color: rgb(167, 72, 85);
                 border-color: rgb(167, 72, 85);
+                font-family: lora;
 
             }
 
             .cart a {
                 text-decoration: none;
                 color: white;
-                font-size: 16px;
+                font-size: 20px;
 
             }
             .box:hover{
@@ -628,7 +629,7 @@
                             <div class="dropdown-content">
 
                                 <a href="#">Desktop Stationery</a>
-                                <a href="#">Arts supplies</a>
+                                <a href="UserServlet?page=art_category">Arts supplies</a>
                                 <a href="#">Paper products</a>
                                 <a href="#">Calculators</a>
                                 <a href="#">Student supplies</a>
@@ -636,8 +637,8 @@
                                 <a href="#">Notebooks</a>
                             </div>
                         </div>
-                        <li> <a href="about.jsp">Combo Offers</a></li>
-                        <li> <a href="about.html">About Us</a></li>
+                        <li> <a href="UserServlet?page=combo">Combo Offers</a></li>
+                        <li> <a href="UserServlet?page=about">About Us</a></li>
 
                     </ul>
 
@@ -664,15 +665,15 @@
             <div class="cart-container" id="cart-container">
                 <h3>Your cart</h3>
                 <div class="cart-container-body">
-                    <c:forEach items="${carts}" var="cart">
+                    <c:forEach items="${cartProducts}" var="product">
                         <div class="cart-container-body-content">
                             <div class="cart-container-body-content-img">
-                                <img src="${pageContext.request.contextPath}/img/desk.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/img/${product.product_Image}" alt="">
                             </div>
                             <div class="cart-container-body-content-right">
-                                <p>${cart.product_id}</p>
-                                <p>Rs ${cart.user_id}</p>
-                                <a href="">Remove</a>
+                                <p>${product.product_Name}</p>
+                                <p>Rs ${product.product_Price}</p>
+                                <a href="UserServlet?page=remove&cart_id=${cart.cart_id}">Remove</a>
                             </div>
                         </div>
                     </c:forEach>

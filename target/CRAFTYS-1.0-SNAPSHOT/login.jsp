@@ -18,7 +18,7 @@
 
         body {
             min-height: 100vh;
-            font-family: 'poppins', sans-serif;
+            
         }
 
         .mainbody {
@@ -46,7 +46,7 @@
             position: fixed;
             padding: 12px 96px;
             /* margin-left: 100px; */
-            font-family: Century SchoolBook;
+/*            font-family: Century SchoolBook;*/
             display: flex;
             box-shadow: 0px 6px rgb(167, 72, 85);
             align-items: center;
@@ -73,14 +73,15 @@
             justify-content: space-between;
             align-items: center;
             text-align: center;
+            font-family: lora;
         }
 
 
 
         .reema ul li {
             list-style: none;
-            font-size: 20px;
-            font-family: Century Schoolbook;
+            font-size: 19px;
+            font-family: lora;
             justify-content: center;
         }
 
@@ -124,9 +125,9 @@
         .dropdown a {
             text-decoration: none;
             color: black;
-            font-family: century schoolbook;
+            font-family: lora;
 
-            font-size: 20px;
+            font-size: 19px;
 
         }
 
@@ -168,7 +169,7 @@
         .loginbox h1 {
             padding-top: 140px;
             margin-left: 550px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             font-size: 40px;
         }
 
@@ -184,7 +185,7 @@
             font-weight: 100;
             color: rgb(41, 36, 36);
             float: center;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             margin-left: 370px;
             /* border-radius: 20px; */
             padding-left: 15px;
@@ -195,7 +196,7 @@
             color: rgb(90, 89, 89);
            font-size: 20px;
 
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
 
         }
 
@@ -207,6 +208,7 @@
             padding: 15px 0;
             font-size: 18px;
             font-weight: 600;
+            font-family: lora;
             /* border-radius: 20px; */
 
             cursor: pointer;
@@ -224,8 +226,8 @@
        a {
             text-decoration: none;
             color: black;
-            font-size: 20px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 19px;
+            font-family: lora;
             padding-left: 20px;
         }
         a:hover{
@@ -275,9 +277,9 @@
         }
 
         .title1 p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
-            font-size: 18px;
+            font-size: 17px;
             /* padding: 50px; */
             /* margin-top: 60px; */
             text-align: justify;
@@ -287,9 +289,9 @@
         }
 
         .title2 p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
-            font-size: 18px;
+            font-size: 17px;
             /* padding: 50px; */
             /* margin-top: 60px; */
             text-align: justify;
@@ -299,9 +301,9 @@
         }
 
         .title3 p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
-            font-size: 18px;
+            font-size: 17px;
             /* padding: 50px; */
             /* margin-top: 60px; */
             text-align: justify;
@@ -311,9 +313,9 @@
         }
 
         .title4 p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
-            font-size: 18px;
+            font-size: 17px;
             /* padding: 50px; */
             /* margin-top: 60px; */
             text-align: justify;
@@ -334,7 +336,7 @@
         .footerbox1 h2 {
             color: black;
             font-size: 27px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             padding: 12px;
             text-align: center;
             margin-top: 20px;
@@ -347,8 +349,8 @@
 
         .footerbox1 ul li {
             text-decoration: none;
-            font-size: 18px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            font-family: lora;
             padding: 10px;
             text-align: center;
         }
@@ -371,7 +373,7 @@
         .footerbox2 h2 {
             color: black;
             font-size: 27px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             padding: 12px;
             text-align: center;
         }
@@ -383,8 +385,8 @@
 
         .footerbox2 ul li {
             text-decoration: none;
-            font-size: 18px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            font-family: lora;
             padding: 10px;
             text-align: center;
         }
@@ -406,7 +408,7 @@
 
         .last p {
             font-size: 15px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: lora;
             color: black;
             text-align: center;
             padding: 20px;
@@ -442,19 +444,19 @@
                     <li> <a href="index.html" id="active">Home</a></li>
 
                     <div class="dropdown">
-                        <a href="catalog.jsp">Products</a>
+                        <a href="UserServlet?page=category">Products</a>
                         <div class="dropdown-content">
 
                             <a href="#">Desktop Stationery</a>
-                            <a href="#">Arts and supplies</a>
+                            <a href="UserServlet?page=art_category">Arts and supplies</a>
                             <a href="#">Paper products</a>
                             <a href="#">Calculators</a>
                             <a href="#">Student supplies</a>
                             <a href="#">Writing instruments</a>
                         </div>
                     </div>
-                    <li> <a href="about.jsp">Combo Offers</a></li>
-                    <li> <a href="contact.jsp">About Us</a></li>
+                    <li> <a href="UserServlet?page=combo">Combo Offers</a></li>
+                    <li> <a href="UserServlet?page=about">About Us</a></li>
 
                 </ul>
 
@@ -484,10 +486,11 @@
                 <input type="text" name="email" id="username" placeholder="Email">
     
     
-                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
     
                 <div class="forget">
-                    <a href="reset.html">Forget password?</a>
+                    <a href="UserServlet?page=forgetpassword">Forget password?</a>
                 </div>
     
                 <button name="button" type="submit"> SIGN IN</button>

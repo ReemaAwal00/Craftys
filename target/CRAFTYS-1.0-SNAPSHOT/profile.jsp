@@ -513,11 +513,11 @@
                     <li> <a href="index.html" id="active">Home</a></li>
 
                     <div class="dropdown">
-                        <a href="catalog.jsp">Products</a>
+                        <a href="UserServlet?page=category">Products</a>
                         <div class="dropdown-content">
 
                             <a href="#">Desktop Stationery</a>
-                            <a href="#">Arts supplies</a>
+                            <a href="UserServlet?page=art_category">Arts supplies</a>
                             <a href="#">Paper products</a>
                             <a href="#">Calculators</a>
                             <a href="#">Student supplies</a>
@@ -525,8 +525,8 @@
                             <a href="#">Notebooks</a>
                         </div>
                     </div>
-                    <li> <a href="about.jsp">Combo Offers</a></li>
-                    <li> <a href="contact.jsp">About Us</a></li>
+                    <li> <a href="UserServlet?page=combo">Combo Offers</a></li>
+                    <li> <a href="UserServlet?page=about">About Us</a></li>
 
                 </ul>
 
@@ -578,7 +578,7 @@
             <!-- <h2>Account Information</h2> -->
             <h3>My profile</h3>
             <div class="detailbox">
-                <div class="edit"><a href="update.html">
+                <div class="edit"><a href="#">
 
                         <button class="submit">Update</button>
                     </a>
@@ -607,9 +607,9 @@
 
                     </ul>
                     <div class="change">
-                        <li><a href="changepassword.html">Change password</a></li>
+                        <li><a href="UserServlet?page=changepassword">Change password</a></li>
                         <br>
-                        <li><a href="login.html">Logout</a></li>
+                        <li><a href="UserServlet?page=logout">Logout</a></li>
                     </div>
                 </div>
 

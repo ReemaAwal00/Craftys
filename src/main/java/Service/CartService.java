@@ -75,4 +75,18 @@ public class CartService {
         }
     }
     
+ public void removeCartById(int cart_id) {
+         String query = "delete from cart where cart_id=?;";
+
+        PreparedStatement preparedStatement = new DBConnection().getStatement(query);
+        try {
+         
+            preparedStatement.setInt(1, cart_id);
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+    }
 }
